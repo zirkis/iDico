@@ -590,7 +590,7 @@ if __name__ == '__main__':
     fenetrePrincipale = vue()
     fenetrePrincipale.resize(985,400)
     fenetrePrincipale.setWindowTitle("iDictionnaire")
-    fenetrePrincipale.setWindowIcon(QIcon("/img/icon.png"))
+    
     fenetrePrincipale.show()
 
     sys.exit(app.exec_())
