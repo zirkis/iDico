@@ -108,6 +108,7 @@ class vue(QMainWindow):
         self.boutonRechTerm.setMinimumSize(self.tailleBouton)
         self.boutonRechTerm.setIcon(QIcon("img/chat.png"))
         self.boutonRechTerm.setIconSize(self.tailleIcon)
+        self.numeroPhoto = -1
         self.boutonRechTerm.clicked.connect(self.chat)
         self.layoutFenetrePrincipale.addWidget(self.boutonRechTerm,0,28)
 
@@ -238,7 +239,7 @@ class vue(QMainWindow):
         # Déclaration et paramétrage du widget accueillant le formulaire
         self.formulaireAjout = QWidget()
         self.formulaireAjout.setWindowTitle(self.controleur.titres[0])
-        self.formulaireAjout.resize(300,200)
+        self.formulaireAjout.resize(500,200)
 
         # Déclaration du layout du formulaire
         self.layoutAjout = QGridLayout()
@@ -294,7 +295,7 @@ class vue(QMainWindow):
         # Déclaration et paramétrage du widget accueillant le formulaire        
         self.formulaireSuppression = QWidget()
         self.formulaireSuppression.setWindowTitle(self.controleur.titres[2])
-        self.formulaireSuppression.resize(200,100)
+        self.formulaireSuppression.resize(500,100)
 
         # Déclaration du layout du formulaire
         self.layoutSuppression = QGridLayout()
@@ -325,7 +326,7 @@ class vue(QMainWindow):
         # Déclaration et paramétrage du widget accueillant le formulaire
         self.formulaireModif = QWidget()
         self.formulaireModif.setWindowTitle(self.controleur.titres[4])
-        self.formulaireModif.resize(300,200)
+        self.formulaireModif.resize(500,200)
 
         # Déclaration du layout du formulaire
         self.layoutModif = QGridLayout()
@@ -386,7 +387,7 @@ class vue(QMainWindow):
         # Déclaration et paramétrage du widget accueillant le formulaire        
         self.formulaireContenant = QWidget()
         self.formulaireContenant.setWindowTitle(self.controleur.titres[8])
-        self.formulaireContenant.resize(300,100)
+        self.formulaireContenant.resize(500,100)
 
         # Déclaration du layout du formulaire
         self.layoutContenant = QGridLayout()
@@ -417,7 +418,7 @@ class vue(QMainWindow):
         # Déclaration et paramétrage du widget accueillant le formulaire        
         self.formulaireTerminant = QWidget()
         self.formulaireTerminant.setWindowTitle(self.controleur.titres[10])
-        self.formulaireTerminant.resize(300,100)
+        self.formulaireTerminant.resize(500,100)
 
         # Déclaration du layout du formulaire
         self.layoutTerminant = QGridLayout()
@@ -536,7 +537,11 @@ class vue(QMainWindow):
         , "img/chat8.jpg", "img/chat9.jpg", "img/chat10.jpg"]
 
         self.labelChat = QLabel()
-        self.pix = QPixmap(self.listeChat[random.randint(0, 9)])
+        if self.numeroPhoto < 9:
+            self.numeroPhoto += 1
+        else:
+            self.numeroPhoto = 0
+        self.pix = QPixmap(self.listeChat[self.numeroPhoto])
         self.labelChat.setPixmap(self.pix)
 
         self.boutonPlusChat = QPushButton("Encore !")
@@ -562,15 +567,15 @@ class vue(QMainWindow):
             "Nous espérons qu'il conviendra parfaitement à votre usage, en répondant à toutes\nvos attentes.\n\n"
             "Liste des fonctionnalités :\n\n"
             "Recherche : Insérer votre recherche dans la barre de recherche, et profitez d'un\naffichage à la volée des résultats ! Bluffant\n\n"
-            "Ajouter : Vous avez besoin d'insérer un nouveau dans le dictionnaire ? Aucun\nproblème ! Remplissez simplement le formulaire, et le tour est joué. Magique\n\n"
-            "Supprimer: Un mot de vous plait pas ? Sa simple vision vous insuporte ?\nAucun problème ! Indiquez simplement son nom, et nous nous occupons de\nlui. Serviable\n\n"
+            "Ajouter : Vous avez besoin d'insérer un nouveau mot dans le dictionnaire ? Aucun\nproblème ! Remplissez simplement le formulaire, et le tour est joué. Magique\n\n"
+            "Supprimer: Un mot de vous plait pas ? Sa simple vision vous insuporte ?\nAucun problème ! Indiquez simplement son nom, et nous nous occupons de\nlui. À votre service\n\n"
             "Modifier : Vous n'êtes pas d'accord avec la définition d'un mot ? Restez calme !\nRemplissez simplement le formulaire, et votre voeux sera exaucé. Serein\n\n"
             "Croissant : Vous n'avez pas eu le temps de prendre votre p'tit dej' ? Pas de soucis.\nChoisissez l'affichage par ordre alphabétique croissant. Pragmatique\n\n"
             "Décroissant : Ou alors l'ordre alphabétique décroissant. A votre guise.\n\n"
             "Rechercher un mot contenant... : Vous vous êtes toujours demandés quels étaient\nles mots contenant 'chat' ? Cette fonctionnalité est faite pour vous. Dédicasse\n\n"
             "Rechercher un mot se terminant par... : Vous cherchez plutôt les mots finissant\npar 'python' ? Nous avons pensé à vous. Comme toujours.\n\n"
-            "Chat : Notre déontologie nous oblige à vous déconseiller d'utiliser\ncette fonctionnalité en public... Intrépide\n\n"
-            "Dictionnaire Quadrilingue : Vous n'avez jamais été doué pour les langues étrangères ?\nCette époque est révolue ! Vous pouvez dorénavant parlez Français, Anglais, Espagnol\net Italien ! Et switcher de dictionnaire en un clic. Amazing")
+            "Chat : Notre déontologie nous oblige à vous déconseiller d'utiliser cette\nfonctionnalité en public... Intrépide\n\n"
+            "Dictionnaire Quadrilingue : Vous n'avez jamais été doué pour les langues\nétrangères ? Cette époque est révolue ! Vous pouvez dorénavant parlez Français,\nAnglais, Espagnol et Italien ! Et switcher de dictionnaire en un clic, en profitant\nde la traduction de tous les menus et formulaires, à la volée. Amazing")
         self.labelInfo.setFont(QFont("Arial", 11, QFont.Bold))
         self.layoutInfo = QGridLayout()
         self.layoutInfo.addWidget(self.labelInfo,0,0)
