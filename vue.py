@@ -1,5 +1,3 @@
-import sys
-import random
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -582,20 +580,3 @@ class vue(QMainWindow):
         self.fenetreInfo.setLayout(self.layoutInfo)
 
         self.fenetreInfo.show()
-
-# ------------------------------------------------------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------------------------------------------------------
-#                                                           Main
-# ------------------------------------------------------------------------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------------------------------------------------------------------
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-
-    # Instanciation de la vue, déclaration de la taille, du titre et affichage de la fenêtre
-    fenetrePrincipale = vue()
-    fenetrePrincipale.resize(985,400)
-    fenetrePrincipale.setWindowTitle("iDictionnaire")
-    
-    fenetrePrincipale.show()
-
-    sys.exit(app.exec_())
