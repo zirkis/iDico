@@ -19,6 +19,7 @@ class vue(QMainWindow):
         # Initialisation de la fenêtre principale
         QMainWindow.__init__(self)
 
+
         # Instanciation du modèle et du controleur
         self.modele = Modele()
         self.controleur = Controleur(self.modele)
