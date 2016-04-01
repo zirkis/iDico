@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from modele import *
 from controleur import *
-#guillaumedubois
+
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 #                                                             Vue
@@ -224,7 +224,7 @@ class vue(QMainWindow):
         self.tableau.setColumnWidth(3,110)
         self.tableau.setColumnWidth(4,90)
         self.tableau.setColumnWidth(5,90)
-        self.tableau.setColumnWidth(6,90)
+        self.tableau.setColumnWidth(6,100)
 
         # Ajustement de la hauteur des lignes du tableau en fonction de leur contenu
         self.tableau.resizeRowsToContents()
