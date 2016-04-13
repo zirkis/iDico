@@ -1,5 +1,6 @@
 # iDico
 Digital multilingual dictionary (French/English/Spanish/Italian). Coded with Python3. Interfaced with PyQt. SQLite Data Base.
+MVC Architecture.
 By Jocelyne BOUN, Guillaume DUBOIS & Benjamin HAOUI.
 
 To run the project:
