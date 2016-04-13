@@ -14,4 +14,5 @@ Screenshots :
 ![alt tag](https://github.com/zirkis/iDico/blob/master/img/screenshots/Capture%20d’écran%202016-04-13%20à%2014.50.17.png)
 ![alt tag](https://github.com/zirkis/iDico/blob/master/img/screenshots/Capture%20d’écran%202016-04-13%20à%2014.50.39.png)
 ![alt tag](https://github.com/zirkis/iDico/blob/master/img/screenshots/Capture%20d’écran%202016-04-13%20à%2014.50.46.png)
+![alt tag](https://github.com/zirkis/iDico/blob/master/img/screenshots/Capture%20d’écran%202016-04-13%20à%2014.50.59.png)
 
