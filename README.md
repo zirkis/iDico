@@ -1,4 +1,11 @@
 # iDico
-Dictionnaire numérique multilingue Python sous PyQt5 (IHM)
+Digital multilingual dictionary (French/English/Spanish/Italian). Coded with Python3. Interfaced with PyQt. SQLite Data Base.
+By Jocelyne BOUN, Guillaume DUBOIS & Benjamin HAOUI.
 
-Projet ESME
+To run the project:
+
+- $ cd iDico
+- $ python main.py
+
+Screenshots :
+
